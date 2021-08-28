@@ -4,6 +4,8 @@
 An example of a single neuron from a neural network. This neuron has 3 
 inputs with corresponding weights. 
 
+https://nnfs.io/bkr
+
 '''
 
 inputs = [1, 2, 3]
