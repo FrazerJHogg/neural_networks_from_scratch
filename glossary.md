@@ -2,7 +2,7 @@
 
 * **Activation function** : 
 
-* **Array** : A homologous list of lists
+* **Array** : An ordered homologous container for numbers, which can have one or more dimensions (N.b. In the context of nnfs book)
 
 * **Bias** : 
 
