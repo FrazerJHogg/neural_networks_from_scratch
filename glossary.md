@@ -50,4 +50,6 @@
 
 * **Unsupervised learning** : A form of machine learning where the a machine finds structure in data without knowing the classifications ahead of time
 
+* **Vector** : An array with a single dimension (e.g. a list)
+
 * **Weight** : A trainable factor of how much of an input is used 
