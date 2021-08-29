@@ -2,9 +2,11 @@
 
 * **Activation function** : 
 
+* **Array** : A homologous list of lists
+
 * **Bias** : 
 
-* **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations.”
+* **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
@@ -16,7 +18,11 @@
 
 * **Hidden layers** : The layers inbetween the inputs and outputs in a Neural Network 
 
+* **Homologous** : An array (e.g. a list of lists) where each list is the same length
+
 * **Loss** : How 'wrong' a model is when making predictions
+
+* **Matrix** : Is a retangular array with two dimensions  
 
 * **(Artificial) Neural networks** : Type of machine learning, often used for deep learning
 
@@ -24,11 +30,11 @@
 
 * **Normalisation** : 
 
-* **Overfitting** : Refers to a model that models the training data too well, which negatively impacts the performance of the model when presented with new data. 
+* **Overfitting** : Refers to a model that models the training data too well, which negatively impacts the performance of the model when presented with new data
 
 * **Parameters** : The weights and biases of a neural network. 
 
-* **Preprocess** : Converting 'raw' data into numeric form using function such as `normalisation' and 'scaling'.
+* **Preprocess** : Converting 'raw' data into numeric form using function such as `normalisation' and 'scaling'
 
 * **Rectified Linear (ReLU) activation function** : 
 
@@ -38,8 +44,10 @@
 
 * **Step function** : 
 
-* **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model. 
+* **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model 
 
-* **Unsupervised learning** : A form of machine learning where the a machine finds structure in data without knowing the classifications ahead of time. 
+* **Tensor** : A tensor object is an object that can be represented as an array  
+
+* **Unsupervised learning** : A form of machine learning where the a machine finds structure in data without knowing the classifications ahead of time
 
 * **Weight** : A trainable factor of how much of an input is used 
