@@ -8,7 +8,11 @@
 
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
+* **Cross product** : 
+
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
+
+* **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
 * **Feature** : An individual measurable property or characteristic of a phenomenon
 
