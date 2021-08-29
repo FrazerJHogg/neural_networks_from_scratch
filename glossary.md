@@ -22,7 +22,7 @@
 
 * **Loss** : How 'wrong' a model is when making predictions
 
-* **Matrix** : Is a retangular array with two dimensions  
+* **Matrix** : Is a retangular array with two dimensions (e.g. a list of lists) 
 
 * **(Artificial) Neural networks** : Type of machine learning, often used for deep learning
 
