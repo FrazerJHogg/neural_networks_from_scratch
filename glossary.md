@@ -12,6 +12,8 @@
 
 * **Cross product** : 
 
+* **Dead neuron** : A neuron that outputs '0' everytime. 
+
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
 * **Deep** : Used to describe a neural network with 2 or more hidden layers
