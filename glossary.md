@@ -14,6 +14,8 @@
 
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
+* **Deep** : Used to describe a neural network with 2 or more hidden layers
+
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
 * **Feature** : An individual measurable property or characteristic of a phenomenon
@@ -61,6 +63,8 @@
 * **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model 
 
 * **Tensor** : A tensor object is an object that can be represented as an array  
+
+* **Transposition** : The process of modifying a matrix where rows become columns and columns become rows
 
 * **Unsupervised learning** : A form of machine learning where the a machine finds structure in data without knowing the classifications ahead of time
 
