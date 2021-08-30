@@ -1,22 +1,20 @@
 # Glossary for Neural Networks
 
-* **Activation function** : 
-
 * **Array** : An ordered homologous container for numbers, which can have one or more dimensions (N.b. In the context of nnfs book)
 
 * **Bias** : 
 
-* **Batches** : A package of data that contains multiple observations / samples
+* **Batches** : A package of data that contains multiple `observations` / `samples`
 
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
 * **Cross product** : 
 
-* **Dead neuron** : A neuron that outputs '0' everytime. 
+* **Dead neuron** : A 'neuron' that outputs '0' everytime. 
 
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
-* **Deep** : Used to describe a neural network with 2 or more hidden layers
+* **Deep** : Used to describe a neural network with 2 or more 'hidden layers'
 
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
@@ -31,6 +29,10 @@
 * **Hidden layers** : The layers inbetween the inputs and outputs in a Neural Network 
 
 * **Homologous** : An array (e.g. a list of lists) where each list is the same length
+
+* **Linear activiation function** : An activation function usually applied to the last layers output in the case of a regression model
+
+* **Linear function** : The equation of a line. 
 
 * **Loss** : How 'wrong' a model is when making predictions
 
@@ -50,9 +52,9 @@
 
 * **Parameters** : The weights and biases of a neural network. 
 
-* **Preprocess** : Converting 'raw' data into numeric form using function such as `normalisation' and 'scaling'
+* **Preprocess** : Converting 'raw' data into numeric form using function such as 'normalisation' and 'scaling'
 
-* **Rectified Linear (ReLU) activation function** : 
+* **Rectified Linear (ReLU) activation function** : A function where if _x_ is less than ot equal to _0_ then _y_ is _0_, otherwise _y_ is equal to _x_. This is more simple to compute than a sigmoid activation function. 
 
 * **Regression** : A method for prediciting numerical values (e.g. stock prices) 
 
@@ -60,7 +62,9 @@
 
 * **Scaling** : 
 
-* **Step function** : 
+* **Step activation function** : A function that causes the neuron to fire and output a 1 if the *weights x inputs + bias* results in a value greater than 0, outherwise it will output 0 
+
+* **Sigmoid activation function** : A more granular step function when compared to the 'Step activiation function', which provides additional information that allows for determining how close the function was to 'activating or 'deactivating
 
 * **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model 
 
