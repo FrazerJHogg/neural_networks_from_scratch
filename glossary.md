@@ -4,9 +4,11 @@
 
 * **Bias** : 
 
-* **Batches** : A package of data that contains multiple `observations` / `samples`
+* **Batches** : A package of data that contains multiple 'observations' / 'samples'
 
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
+
+* **Confidence score** : A score for a prediction adding up to _1_ (e.g. confidence a classificaition is class A or class B, 0.45 and 0.55 respectively)
 
 * **Cross product** : 
 
@@ -17,6 +19,8 @@
 * **Deep** : Used to describe a neural network with 2 or more 'hidden layers'
 
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
+
+* **Exploding values** : Very large numbers that cause problems with neural networks 
 
 * **Feature** : An individual measurable property or characteristic of a phenomenon
 
@@ -62,9 +66,11 @@
 
 * **Scaling** : 
 
-* **Step activation function** : A function that causes the neuron to fire and output a 1 if the *weights x inputs + bias* results in a value greater than 0, outherwise it will output 0 
-
 * **Sigmoid activation function** : A more granular step function when compared to the 'Step activiation function', which provides additional information that allows for determining how close the function was to 'activating or 'deactivating
+
+* **Softmax activation function** : An activation function used for classification that outputs a confidence score for each class (probability distribution)
+
+* **Step activation function** : A function that causes the neuron to fire and output a 1 if the *weights x inputs + bias* results in a value greater than 0, outherwise it will output 0 
 
 * **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model 
 
