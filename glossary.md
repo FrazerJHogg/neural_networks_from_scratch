@@ -6,6 +6,8 @@
 
 * **Bias** : 
 
+* **Batches** : A package of data that contains multiple observations / samples
+
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
 * **Cross product** : 
@@ -15,6 +17,8 @@
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
 * **Feature** : An individual measurable property or characteristic of a phenomenon
+
+* **Feature observation datum** : 
 
 * **Fully connected neural network** : A neural network where every neuron in the current layer has connection to every neuron from the previous layer
 
@@ -28,11 +32,15 @@
 
 * **Matrix** : Is a retangular array with two dimensions (e.g. a list of lists) 
 
+* **Matrix Product** : An operation in which we have 2 matrices, and dot products is performed for all combinations of rows from the first matrix and the columns of the second matrix, resulting in a matrix of dot products (https://nnfs.io/jei/)
+
 * **(Artificial) Neural networks** : Type of machine learning, often used for deep learning
 
 * **Neuron** : A mathmatical function that takes one or more inputs and multiplys them by weights
 
 * **Normalisation** : 
+
+* **Observation** : One sample of a feature set
 
 * **Overfitting** : Refers to a model that models the training data too well, which negatively impacts the performance of the model when presented with new data
 
@@ -43,6 +51,8 @@
 * **Rectified Linear (ReLU) activation function** : 
 
 * **Regression** : A method for prediciting numerical values (e.g. stock prices) 
+
+* **Sample** : More common term for 'Observation'
 
 * **Scaling** : 
 
@@ -56,4 +66,4 @@
 
 * **Vector** : An array with a single dimension (e.g. a list)
 
-* **Weight** : A trainable factor of how much of an input is used 
+* **Weight** : A trainable factor of how much of an input is used
