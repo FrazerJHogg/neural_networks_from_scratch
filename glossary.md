@@ -38,7 +38,9 @@
 
 * **Linear function** : The equation of a line. 
 
-* **Loss** : How 'wrong' a model is when making predictions
+* **Loss** : A metric to measure 'wrong' a model is when making predictions
+
+* **Loss function (cost function)** : An algorithm that quantifies how wrong a model is. 
 
 * **Matrix** : Is a retangular array with two dimensions (e.g. a list of lists) 
 

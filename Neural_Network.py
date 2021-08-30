@@ -1,5 +1,5 @@
 '''
-** Layer Dense Class **
+** Neural Network **
 
 '''
 
@@ -58,7 +58,6 @@ dense1 = Layer_Dense(2, 3)
 
 # Create ReLU activation (to be used with Dense layer)
 activation1 = Activation_ReLU()
-
 
 # Create a second Dense layer with 3 input features (as we take
 # output of previous layer here) and 3 output values
