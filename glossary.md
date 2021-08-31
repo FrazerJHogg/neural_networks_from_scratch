@@ -6,6 +6,8 @@
 
 * **Batches** : A package of data that contains multiple 'observations' / 'samples'
 
+* **Categorical cross-entropy** : A loss function used to compare a "ground-truth" ( _y_ or targets) probability annd some predicted distribution ( _y-hat_ or 'predictions'). It is one of the most commonly used loss function with a softmax activation on the output layer
+
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
 * **Confidence score** : A score for a prediction adding up to _1_ (e.g. confidence a classificaition is class A or class B, 0.45 and 0.55 respectively)
@@ -71,6 +73,8 @@
 * **Sigmoid activation function** : A more granular step function when compared to the 'Step activiation function', which provides additional information that allows for determining how close the function was to 'activating or 'deactivating
 
 * **Softmax activation function** : An activation function used for classification that outputs a confidence score for each class (probability distribution)
+
+* **(Mean) squared error** : A loss function used for neural networks that perform regression.
 
 * **Step activation function** : A function that causes the neuron to fire and output a 1 if the *weights x inputs + bias* results in a value greater than 0, outherwise it will output 0 
 
