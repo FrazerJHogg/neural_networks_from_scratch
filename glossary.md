@@ -56,6 +56,8 @@
 
 * **Observation** : One sample of a feature set
 
+* **One-hot (vector)** : One of the values in the vector is 'hot' (on), with a value of 1, and the rest are 'cold' (off) with a value of 0 (e.g. `[1, 0, 0]`) 
+
 * **Overfitting** : Refers to a model that models the training data too well, which negatively impacts the performance of the model when presented with new data
 
 * **Parameters** : The weights and biases of a neural network. 
