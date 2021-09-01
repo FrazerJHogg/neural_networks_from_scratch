@@ -62,7 +62,7 @@
 
 * **Normalisation** : 
 
-* **Numerical differentiation** : Calculating the slope of a tangent line using two 'infinitely' close points, or calculating the slope of a tangent line made from two points that are 'sufficiently close' (https://nnfs.io/cat/)
+* **Numerical differentiation** : A method for calculating derivatives (e.g. calculating the slope of a tangent line using two infinitely close points)
 
 * **Observation** : One sample of a feature set
 
