@@ -12,12 +12,13 @@ import numpy as np
 def f(x):
     return 2*x**2
 
-# np.arange(start, stop, step) to plot a smoother line
+# Plot the curve on a graph using np.array
 x = np.array(np.arange(0, 5, 0.001))
 y = f(x)
 
 plt.plot(x, y)
 
+# 5 colours to be used for plotting tangent lines
 colours = ['k', 'g', 'r', 'b', 'c']
 
 
@@ -32,6 +33,7 @@ def tangent_line(x):
 def approximate_tangent_line(x, approximate_derivative):
     return (approximate_derivative*x) + b
 
+# Plotting 5 tanget lines
 for i in range(5):
     
     # Applied to give two 'sufficently close' points to calculate the slope
