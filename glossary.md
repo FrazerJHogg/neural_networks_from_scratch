@@ -26,13 +26,52 @@
 
 * **Deep** : Used to describe a neural network with 2 or more 'hidden layers'
 
+* **Delta** : A small change in a given value denoted by `Δ`
+
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
 * **Dependant variable** : A variable that's value is impacted by another variable. For example, in `y = mx + b` the value of `y` is dependant on the value of `x`, which is the 'independent variable'
 
-* **Derivative** : The rate of change of a variable, or function, with respect to another variable, or function. For example, measuring the slope of the tangent line for a function that takes a single parameter as an input 
+* **Derivative** : The rate of change of a variable, or function, with respect to another variable, or function. 
 
-In `y = mx + b` the derivative will show the rate `y` is changing with respect to the value of `x` (N.b. Useful video on deriviatives https://youtu.be/wLTDW7t5Z2c )
+    In `y = mx + b` the derivative will show the rate `y` is changing with respect to the value of `x` (N.b. Useful video on deriviatives https://youtu.be/wLTDW7t5Z2c )
+
+    Another example is measuring the slope of the tangent line for a function that takes a single parameter as an input (Explained here: https://www.youtube.com/watch?v=29Px0qXE1BU, notes captured below).
+
+    **Notes:** 
+
+    * There are two points on a graph; `P` and `Q`
+
+    * The coordinates for..
+
+        * P are : `(x, f(x))`
+        * Q are : `(x+Δx, f(x+Δx)`) 
+
+    * Function `f(x)` to determine `y` at the first point (e.g `y=x^2`)
+
+    * Function `f(x+Δx)` to determine `y` at the second point 
+
+    * Slope the change between is `Δy / Δx` (i.e. the change in `y` divided by the change in `x`).
+
+        *  To find the difference in `y` values between the two points;
+
+            `f(x+Δx) - f(x)`
+
+        * The difference in the `x` is simply `Δx`
+
+        * Therefore,  `Δy / Δx` = `f(x+Δx) - f(x) / Δx`
+
+        * The function at `x` (e.g. `y = x^2`) then needs to be plugged (i.e. replace every `x` with `x^2` into the equation to calculate the derivitive of the function;
+
+            * `(x+Δx)^2 - x^2 / Δx`
+
+            *  Multiplied out becomes `x^2 + 2xΔx + (Δx)^2 - x^2 / Δx`
+
+            * The `x^2` and `-x^2` cancel each other out, so the equation can be simplifed to;
+
+                `2xΔx + (Δx)^2 / Δx`
+            
+            * Deviding by `Δx` then results in `2x + Δx`, which when `Δx` equates to `0` results in derivative being `2x`, which is also a function.
 
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
@@ -100,7 +139,13 @@ In `y = mx + b` the derivative will show the rate `y` is changing with respect t
 
 * **Sigmoid activation function** : A more granular step function when compared to the 'Step activiation function', which provides additional information that allows for determining how close the function was to 'activating or 'deactivating
 
-* **Slope** : An inidication of a lines steppness of inclination, which is usually denoted as _m_
+* **Slope** : An inidication of a lines steppness of inclination, which is usually denoted as _m_.
+
+    * Rise : Relative change in `y` from a given point
+    * Run : Relative change in `x` from a given pioint 
+
+    `Slope = Rise / Run = Δy / Δx = (f(x+Δx) - f(x)) / Δx`
+
 
 * **Softmax activation function** : An activation function used for classification that outputs a confidence score for each class (probability distribution)
 
