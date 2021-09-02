@@ -1,6 +1,10 @@
 # Glossary for Neural Networks
 
-* **Accuracy** : Describes how often the largest is the correct class. 
+* **Accuracy** : Describes how often the largest is the correct class
+
+* **Analytical derivative** : 
+
+* **Analytical methods** : 
 
 * **Array** : An ordered homologous container for numbers, which can have one or more dimensions (N.b. In the context of nnfs book)
 
@@ -9,6 +13,8 @@
 * **Batches** : A package of data that contains multiple 'observations' / 'samples'
 
 * **Categorical cross-entropy** : A loss function used to compare a "ground-truth" ( _y_ or targets) probability annd some predicted distribution ( _y-hat_ or 'predictions'). It is one of the most commonly used loss function with a softmax activation on the output layer
+
+* **Chain rule** : 
 
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
@@ -22,7 +28,11 @@
 
 * **Dense layer** : A layer in which each neuron of a given layer is connected to every neuron of the next layer
 
-* **Derivative** : The rate of change of a function with respect to a variable (e.g. Measuring the slope of the tangent line for a function that takes a single parameter as an input).
+* **Dependant variable** : A variable that's value is impacted by another variable. For example, in `y = mx + b` the value of `y` is dependant on the value of `x`, which is the 'independent variable'
+
+* **Derivative** : The rate of change of a variable, or function, with respect to another variable, or function. For example, measuring the slope of the tangent line for a function that takes a single parameter as an input 
+
+In `y = mx + b` the derivative will show the rate `y` is changing with respect to the value of `x` (N.b. Useful video on deriviatives https://youtu.be/wLTDW7t5Z2c )
 
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
 
@@ -35,6 +45,8 @@
 * **Fully connected neural network** : A neural network where every neuron in the current layer has connection to every neuron from the previous layer
 
 * **Generalisation** : The process of training a model to accurately predict on training data as well as out-of sample data
+
+* **Gradient** : Is a vector of the size of inputs containing partial derivative soltions with respect to each of the inputs
 
 * **Hidden layers** : The layers inbetween the inputs and outputs in a Neural Network 
 
@@ -64,6 +76,8 @@
 
 * **Numerical differentiation** : A method for calculating derivatives (e.g. calculating the slope of a tangent line using two infinitely close points)
 
+* **Numerical methods** : The process of identifying a 'number' to find a solution (e.g. an approximate derivative)
+
 * **Observation** : One sample of a feature set
 
 * **One-hot (vector)** : One of the values in the vector is 'hot' (on), with a value of 1, and the rest are 'cold' (off) with a value of 0 (e.g. `[1, 0, 0]`) 
@@ -72,7 +86,7 @@
 
 * **Parameters** : The weights and biases of a neural network. 
 
-* **Partial derivative** :
+* **Partial derivative** : Is a way of measuring each independent input's impact on a functions input, when the function has multiple inputs. 
 
 * **Preprocess** : Converting 'raw' data into numeric form using function such as 'normalisation' and 'scaling'
 
