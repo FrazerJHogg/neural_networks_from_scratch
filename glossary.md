@@ -90,7 +90,7 @@
 
 * **Parameters** : The weights and biases of a neural network. 
 
-* **Partial derivative** : Is a way of measuring each independent input's impact on a functions input, when the function has multiple inputs. 
+* **Partial derivative** : Is a way of measuring each independent input's impact on a function's output, when the function has multiple inputs. 
 
 * **Preprocess** : Converting 'raw' data into numeric form using function such as 'normalisation' and 'scaling'
 
