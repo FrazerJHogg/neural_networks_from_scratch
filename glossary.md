@@ -10,11 +10,15 @@
 
 * **Bias** : 
 
+* **Backpropagation** : A method for computing the gradient of the loss function for a single weight by the chain rule. 
+
+Video: https://nnfs.io/pro/ 
+
 * **Batches** : A package of data that contains multiple 'observations' / 'samples'
 
 * **Categorical cross-entropy** : A loss function used to compare a "ground-truth" ( _y_ or targets) probability annd some predicted distribution ( _y-hat_ or 'predictions'). It is one of the most commonly used loss function with a softmax activation on the output layer
 
-* **Chain rule** : 
+* **Chain rule** : The derivative of a function chain is a product of derivatives of all of the function in the chain.
 
 * **Classification** : The process of recognising, understanding, and grouping ideas and objects into preset categories or “sub-populations”
 
@@ -50,7 +54,7 @@
 
 * **Generalisation** : The process of training a model to accurately predict on training data as well as out-of sample data
 
-* **Gradient** : Is a vector of the size of inputs containing partial derivative soltions with respect to each of the inputs
+* **Gradient** : Is a vector of the size of a function's inputs containing partial derivative soltions with respect to each of the functions inputs. Gradients are denoted with _∇_ (The nabla symbol)
 
 * **Hidden layers** : The layers inbetween the inputs and outputs in a Neural Network 
 
@@ -90,7 +94,7 @@
 
 * **Parameters** : The weights and biases of a neural network. 
 
-* **Partial derivative** : Is a way of measuring each independent input's impact on a function's output, when the function has multiple inputs. 
+* **Partial derivative** : Is a way of measuring each independent input's impact on a function's output, when the function has multiple inputs. Partial derivatives can be denoted with _∂_
 
 * **Preprocess** : Converting 'raw' data into numeric form using function such as 'normalisation' and 'scaling'
 
