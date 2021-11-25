@@ -48,16 +48,17 @@ class Activation_ReLU:
 
         # For storing inputs
         self.inputs = inputs
+        self.output = np.maximum(0, inputs)
 
     # Backward pass 
     def backward(self, dvalues):
-        # Gradients on parameters
-        self.dweights = np.dot(self.inputs.T, dvalues)
-        self.dbiases = np.sum(dvalues, axis=0, keepdims=True)
+        # Since the original variable needs to be modified, 
+        # this makes a copy of the values
+        self.dinputs = dvalues.copy()
 
-        # Gradient on values 
-        self.dinputs = np.dot(dvalues, self.weights.T)
-        
+        # Zero gradient where input values were negative
+        self.dinputs[self.inputs <= 0] = 0
+
 
 class Activation_Softmax:
 
