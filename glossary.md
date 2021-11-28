@@ -16,6 +16,8 @@ Video: https://nnfs.io/pro/
 
 * **Batches** : A package of data that contains multiple 'observations' / 'samples'
 
+* **Batch Gradient Descent (BGD)**: An optimiser user to fit a whole dataset at once.
+
 * **Categorical cross-entropy** : A loss function used to compare a "ground-truth" ( _y_ or targets) probability annd some predicted distribution ( _y-hat_ or 'predictions'). It is one of the most commonly used loss function with a softmax activation on the output layer
 
 * **Chain rule** : The derivative of a function chain is a product of derivatives of all of the function in the chain.
@@ -43,6 +45,8 @@ Video: https://nnfs.io/pro/
     Another example is measuring the slope of the tangent line for a function that takes a single parameter as an input (Explained here: https://www.youtube.com/watch?v=29Px0qXE1BU, notes captured below).
 
 * **Dot product** : Is the sum of products of consecutive vecor elements (e.g. the multiplication and addition operations performed on 'weights' and 'inputs' of a neuron)
+
+* **Epoch** : A fall pass, consisting of a forward pass, backward pass and optimisation, through all of the training data.
 
 * **Exploding values** : Very large numbers that cause problems with neural networks 
 
@@ -76,6 +80,8 @@ Video: https://nnfs.io/pro/
 
 * **Matrix Product** : An operation in which we have 2 matrices, and dot products is performed for all combinations of rows from the first matrix and the columns of the second matrix, resulting in a matrix of dot products (https://nnfs.io/jei/)
 
+* **Mini-batch Gradient Descent (MBGD)** : An optimiser user to fit slices of a data set.
+
 * **(Artificial) Neural networks** : Type of machine learning, often used for deep learning
 
 * **Neuron** : A mathmatical function that takes one or more inputs and multiplys them by weights
@@ -89,6 +95,8 @@ Video: https://nnfs.io/pro/
 * **Observation** : One sample of a feature set
 
 * **One-hot (vector)** : One of the values in the vector is 'hot' (on), with a value of 1, and the rest are 'cold' (off) with a value of 0 (e.g. `[1, 0, 0]`) 
+
+* **Optimisers** : 
 
 * **Overfitting** : Refers to a model that models the training data too well, which negatively impacts the performance of the model when presented with new data
 
@@ -120,6 +128,8 @@ Video: https://nnfs.io/pro/
 * **(Mean) squared error** : A loss function used for neural networks that perform regression.
 
 * **Step activation function** : A function that causes the neuron to fire and output a 1 if the *weights x inputs + bias* results in a value greater than 0, outherwise it will output 0 
+
+* **Stochastic Gradient Descent (SGD)** : An optimiser that fits a single sample at a time.
 
 * **Supervised learning** : A form of machine learning where a pre-established and labeled data set can be used to train the model 
 
