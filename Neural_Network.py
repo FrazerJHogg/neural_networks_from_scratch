@@ -3,7 +3,9 @@
 
 '''
 
+from __future__ import print_function
 import numpy as np
+from numpy.core.shape_base import _accumulate
 import nnfs
 from nnfs.datasets import spiral_data
 
@@ -64,6 +66,8 @@ class Activation_Softmax:
 
     # Forward pass
     def forward(self, inputs):
+        # Remember input values
+        self.inputs = inputs
 
         # Get unnormalised probabilities
         exp_values = np.exp(inputs - np.max(inputs, axis=1, keepdims=True))
@@ -72,6 +76,23 @@ class Activation_Softmax:
         probabilities = exp_values / np.sum(exp_values, axis=1, keepdims=True)
         
         self.output = probabilities 
+
+    # Backward pass
+    def backward(self, dvalues):
+
+        # Create an uninitialised array
+        self.dinputs = np.empty_like(dvalues)
+
+        # Enumerate outputs and gradients
+        for index, (single_output, single_dvalues) in enumerate (zip(self.output, dvalues)):
+
+            # Flatten output array
+            single_output = single_output.reshape(-1, 1)
+            # Calculate Jacobian matrix of the output
+            jacobian_matrix = np.diagflat(single_output) - np.dot(single_output, single_output.T)
+            # Calculate sample-wise gradient
+            # and add it to the array of sample gradients
+            self.dinputs[index] = np.dot(jacobian_matrix, single_dvalues)
 
 
 # Common loss class
@@ -140,6 +161,41 @@ class Loss_CategoricalCrossentropy(Loss):
         self.dinputs = self.dinputs / samples
 
 
+# Softmax classifier - combined Softmax activation
+# and cross-entropy loss for fast backward step
+class Activation_Softmax_Loss_CategoricalCrossentropy():
+
+    #Creates activation and loss function objects
+    def __init__(self):
+        self.activation = Activation_Softmax()
+        self.loss = Loss_CategoricalCrossentropy()
+    
+    # Forward pass 
+    def forward(self, inputs, y_true):
+        # Output layer's activiation function 
+        self.activation.forward(inputs)
+        # Set the output 
+        self.output = self.activation.output
+        # Calculate and return loss value 
+        return self.loss.calculate(self.output, y_true)
+
+    # Backward pass
+    def backward(self, dvalues, y_true):
+        # Number of samples
+        samples = len(dvalues)
+        # If labels are one-hot encoded 
+        # turn them into discrete values 
+        if len(y_true.shape) == 2:
+            y_true = np.argmax(y_true, axis=1)
+        # Copy to be able to safely modify 
+        self.dinputs = dvalues.copy()
+        # Calculate gradients
+        self.dinputs[range(samples), y_true] -= 1
+        # Normalise gradient
+        self.dinputs = self.dinputs / samples
+
+
+
 # Create dataset
 X, y = spiral_data (samples=100, classes=3)
  
@@ -153,34 +209,48 @@ activation1 = Activation_ReLU()
 # output of previous layer here) and 3 output values
 dense2 = Layer_Dense(3, 3)
 
-# Create Softmax activation (to de used with Dense layer)
-activation2 = Activation_Softmax()
+# Create Softmax classifier's combined loss and activation
+loss_activation = Activation_Softmax_Loss_CategoricalCrossentropy()
 
-# Make a forward pass of our training data through this layer 
+# Perform a forward pass of our training data through this layer 
 dense1.forward(X)
 
-# Create loss function
-loss_function = Loss_CategoricalCrossentropy()
-
-# Make a forward pass through activation function
-# it takes the out of the first Dense Layer here
+# Performn a forward pass through activation function
+# takes the output of the first dense layer
 activation1.forward(dense1.output)
 
 # Make a forward pass through the second Dense Layer
 # it takes the output of the first dense layer here
 dense2.forward(activation1.output)
 
-# Make a forward pass through activation function 
-# it take the output of the second dense layer here 
-activation2.forward(dense2.output)
+# Perform a forward pass through the activation/loss function
+# takes the output of the second layer here and returns loss
+loss = loss_activation.forward(dense2.output, y)
 
 # Let's see output of the first few samples: 
-print(activation2.output[:5])
-
-# Perform a forward pass through activation function 
-# it takes the output of second dense layer here and 
-# returns loss
-loss = loss_function.calculate(activation2.output, y)
+print(loss_activation.output[:5])
 
 # Print loss value 
-print('loss: ', loss)
+print('loss:', loss)
+
+# Calculate accuracy from output of activation2 and targets
+# calculate values along first axis
+predictions = np.argmax(loss_activation.output, axis=1)
+if len(y.shape) == 2:
+    y = np.argmax(y, axis=1)
+accuracy = np.mean(predictions==y)
+
+# Print accuracy 
+print('acc:', accuracy)
+
+# Backward pass
+loss_activation.backward(loss_activation.output, y)
+dense2.backward(loss_activation.dinputs)
+activation1.backward(dense2.dinputs)
+dense1.backward(activation1.dinputs)
+
+# Print gradients
+print(dense1.dweights)
+print(dense1.dbiases)
+print(dense2.dweights)
+print(dense2.dbiases)
