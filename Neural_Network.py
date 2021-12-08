@@ -208,7 +208,7 @@ class Optimiser_SDG:
     # Call once before any parameter updates
     def pre_update_params(self):
         if self.decay:
-            self.current_learning_rate = self.current_learning_rate * (1.0 / (1.0 + self.decay * self.iterations))
+            self.current_learning_rate = self.learning_rate * (1.0 / (1.0 + self.decay * self.iterations))
 
     # Update parameters
     def update_params(self, layer):
@@ -236,7 +236,7 @@ dense2 = Layer_Dense(64, 3)
 loss_activation = Activation_Softmax_Loss_CategoricalCrossentropy()
 
 # Create optimiser
-optimiser = Optimiser_SDG()
+optimiser = Optimiser_SDG(decay=1e-3)
 
 # Train in loop
 for epoch in range(10001):
@@ -266,7 +266,8 @@ for epoch in range(10001):
     if not epoch % 100:
         print(f'epoch: {epoch}, ' +
         f'acc: {accuracy:.3f}, ' +
-        f'loss: {loss:.3f}')
+        f'loss: {loss:.3f}'
+        f'lr: {optimiser.current_learning_rate}')
 
     # Backward pass
     loss_activation.backward(loss_activation.output, y)
@@ -275,5 +276,7 @@ for epoch in range(10001):
     dense1.backward(activation1.dinputs)
 
     #Update weights and biases
+    optimiser.pre_update_params()
     optimiser.update_params(dense1)
     optimiser.update_params(dense2)
+    optimiser.post_update_params()
