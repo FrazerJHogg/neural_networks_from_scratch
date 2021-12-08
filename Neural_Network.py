@@ -199,13 +199,25 @@ class Optimiser_SDG:
 
     # Initialise optimiser - set settings,
     # learning rate of 1. is default for this optimiser
-    def __init__(self, learning_rate=1.0):
+    def __init__(self, learning_rate=1.0, decay=0.0):
         self.learning_rate = learning_rate
+        self.current_learning_rate = learning_rate
+        self.decay = decay
+        self.iterations = 0
+
+    # Call once before any parameter updates
+    def pre_update_params(self):
+        if self.decay:
+            self.current_learning_rate = self.current_learning_rate * (1.0 / (1.0 + self.decay * self.iterations))
 
     # Update parameters
     def update_params(self, layer):
         layer.weights += -self.learning_rate * layer.dweights
         layer.biases += -self.learning_rate * layer.dbiases
+
+    # Call once after any parameter updates
+    def post_update_params(self):
+        self.iterations += 1
 
 # Create dataset
 X, y = spiral_data (samples=100, classes=3)
@@ -226,6 +238,7 @@ loss_activation = Activation_Softmax_Loss_CategoricalCrossentropy()
 # Create optimiser
 optimiser = Optimiser_SDG()
 
+# Train in loop
 for epoch in range(10001):
 
     # Perform a forward pass of our training data through this layer 

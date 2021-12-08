@@ -30,6 +30,8 @@ Video: https://nnfs.io/pro/
 
 * **Dead neuron** : A 'neuron' that outputs '0' everytime. 
 
+* **Decay rate** : The steady decay of learning rate per batch or epoch.
+
 * **Deep** : Used to describe a neural network with 2 or more 'hidden layers'
 
 * **Delta** : A small change in a given value denoted by `Δ`
@@ -58,7 +60,12 @@ Video: https://nnfs.io/pro/
 
 * **Generalisation** : The process of training a model to accurately predict on training data as well as out-of sample data
 
+
+* **Global minimum (learning rate)** : The absolute lowest point for a function. 
+
 * **Gradient** : Is a vector of the size of a function's inputs containing partial derivative soltions with respect to each of the functions inputs. Gradients are denoted with _∇_ (The nabla symbol)
+
+* **Gradient explosion** : A situation where the parameter updates cause the function's output to rise instead of fall and with each step the loss value and gradient become larger.
 
 * **Hidden layers** : The layers inbetween the inputs and outputs in a Neural Network 
 
@@ -66,9 +73,13 @@ Video: https://nnfs.io/pro/
 
 * **Instantaneous slope** : The slope at a given point
 
+* **Learning rate decay** : Reducing the learning rate during training of a model. 
+
 * **Linear activiation function** : An activation function usually applied to the last layers output in the case of a regression model
 
 * **Linear function** : The equation of a line. 
+
+* **Local minimum (learning rate)** : The lowest point of a function near a given location but that is not the global minimum. 
 
 * **Log (logarithm)** : The solution for the x-term in an equation of the form `a^x = b` (e.g. `10^x = 100` can be solved with a log: `log10(100)`, which evaluates to 2). 
 
@@ -81,6 +92,8 @@ Video: https://nnfs.io/pro/
 * **Matrix Product** : An operation in which we have 2 matrices, and dot products is performed for all combinations of rows from the first matrix and the columns of the second matrix, resulting in a matrix of dot products (https://nnfs.io/jei/)
 
 * **Mini-batch Gradient Descent (MBGD)** : An optimiser user to fit slices of a data set.
+
+* **Momentum (learning rate)** : 
 
 * **(Artificial) Neural networks** : Type of machine learning, often used for deep learning
 
